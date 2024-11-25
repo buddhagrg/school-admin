@@ -9,7 +9,7 @@ DB: https://github.com/buddhagrg/school-admin-db
 username: `super-admin@school-admin.xyz`\
 password: `iamsuperadmin`\
 **Admin**\
-username: `super-admin@school-admin.xyz`\
+username: `admin@school-admin.xyz`\
 password: `iamadmin`
 
 _**FYI:** You can add your own school, admin for that school and respective roles as per your need._
