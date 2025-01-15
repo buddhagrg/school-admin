@@ -1,5 +1,5 @@
 ## Demo
-[https://www.school-admin.xyz/auth/login](https://www.school-admin.xyz/auth/login)
+[https://school-admin.xyz/auth/login](https://www.school-admin.xyz/auth/login)
 
 **Super Admin**\
 username: `super-admin@school-admin.xyz`\
