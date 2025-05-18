@@ -1,12 +1,9 @@
 ## Demo
-[https://school-admin.xyz/auth/login](https://www.school-admin.xyz/auth/login)
+[https://school-admin.xyz/](https://school-admin.xyz/)
 
-**Super Admin**\
-username: `super-admin@school-admin.xyz`\
-password: `iamsuperadmin`\
 **Admin**\
 username: `admin@school-admin.xyz`\
-password: `iamadmin`
+password: `schooladmin`
 
 ## School Admin
 Frontend: https://github.com/buddhagrg/school-admin-frontend \
