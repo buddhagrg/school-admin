@@ -6,7 +6,8 @@ username: `admin@school-admin.xyz`\
 password: `schooladmin`
 
 ## School Admin
-Frontend: https://github.com/buddhagrg/school-admin-frontend \
+Frontend(Landing Page): https://github.com/buddhagrg/school-admin-landing-page \
+Frontend(Main App): https://github.com/buddhagrg/school-admin-frontend \
 API: https://github.com/buddhagrg/school-admin-api \
 DB: https://github.com/buddhagrg/school-admin-db
 
