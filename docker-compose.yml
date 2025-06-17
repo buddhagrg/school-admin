@@ -1,8 +1,9 @@
 services:
   db:
-    image: postgres
+    image: ghcr.io/buddhagrg/school-admin-db:latest
+    container_name: db
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -18,6 +19,7 @@ services:
 
   api:
     image: ghcr.io/buddhagrg/school-admin-api:latest
+    container_name: api
     env_file:
       - ./api/.env
     ports:
@@ -28,6 +30,7 @@ services:
 
   frontend-vite:
     image: ghcr.io/buddhagrg/school-admin-frontend:latest
+    container_name: main-app
     env_file:
       - ./frontend-vite/.env
     ports:
@@ -38,6 +41,7 @@ services:
 
   frontend-next:
     image: ghcr.io/buddhagrg/school-admin-landing-page:latest
+    container_name: marketing-site
     env_file:
       - ./frontend-next/.env
     ports:
