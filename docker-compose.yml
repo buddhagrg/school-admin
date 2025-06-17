@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U myuser" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  api:
+    image: ghcr.io/buddhagrg/school-admin-api:latest
+    env_file:
+      - ./api/.env.example
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db:
+        condition: service_healthy
+
+  frontend-vite:
+    image: ghcr.io/buddhagrg/school-admin-frontend:latest
+    env_file:
+      - ./frontend-vite/.env.example
+    ports:
+      - "5173:5173"
+    depends_on:
+      - db:
+        condition: service_started
+
+  frontend-next:
+    image: ghcr.io/buddhagrg/school-admin-landing-page:latest
+    env_file:
+      - ./frontend-next/.env.example
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db:
+        condition: service_started
+
+volumes:
+  pgdata:
